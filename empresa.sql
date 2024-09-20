@@ -10,22 +10,22 @@ CREATE TABLE clientes (
     PRIMARY KEY (id)
 )  DEFAULT CHARSET=UTF8MB4;
 
-insert into clientes(id, nome, sexo, nascimento, cidade, uf)
- values ('1', 'Ana', 'F', '1990-06-15', 'Curitiba', 'PR');
+INSERT INTO clientes(id, nome, sexo, nascimento, cidade, uf)
+VALUES('1', 'Ana', 'F', '1990-06-15', 'Curitiba', 'PR');
 
-insert into clientes(nome, sexo, nascimento, cidade, uf)
-values('Beatriz', 'F', '1990-07-15', 'Campo Largo', 'PR');
+INSERT INTO clientes(nome, sexo, nascimento, cidade, uf)
+VALUES('Beatriz', 'F', '1990-07-15', 'Campo Largo', 'PR');
 
 INSERT INTO clientes VALUES
 (default, 'Elaine', 'F', '1995-09-21', default, default),
 (default, 'Fábio', 'M', '1995-10-22', 'Ponta Grossa', default),
 (default, 'Gilberto', 'M', '1996-11-23', 'Santo André', 'SP');
 
-insert into clientes(id, nome, sexo, nascimento, cidade, uf)
-values(default, 'Carlos', 'M', '1990-08-15', default, default);
+INSERT INTO clientes(id, nome, sexo, nascimento, cidade, uf)
+VALUES(default, 'Carlos', 'M', '1990-08-15', default, default);
 
-insert into clientes(nome, sexo, nascimento, cidade, uf)
-values ('João César', 'M', '2006-03-09', 'Ortigueira', 'PR');
+INSERT INTO clientes(nome, sexo, nascimento, cidade, uf)
+VALUES('João César', 'M', '2006-03-09', 'Ortigueira', 'PR');
 
 SELECT * FROM clientes;
 describe clientes;
@@ -42,7 +42,7 @@ add column bairro varchar(20),
 add column telefone char(11);
 describe clientes;
 
-ALTER TABLe clientes
+ALTER TABLE clientes
 modify column idade tinyint unsigned;
 describe clientes;
 
@@ -54,11 +54,7 @@ SET
     telefone = '9121-3040'
 WHERE
     id = 1;
-SELECT 
-    *
-FROM
-    clientes;
-
+SELECT * FROM clientes;
 UPDATE clientes 
 SET 
     idade = 34,
